@@ -1,0 +1,118 @@
+{
+  "version": "9",
+  "items": {
+    "f447c0c56abf53f21fcbcf9971d40c5f": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlin-stdlib-common\\1.8.0\\f7197e7cc76453ac59f8b0f8d5137cc600becd36\\kotlin-stdlib-common-1.8.0.jar"
+    },
+    "f3c0543c4cc18ef8d70c0da3c71f726e": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlinx\\kotlinx-serialization-json-js\\1.5.0-RC\\b9292269aba1b9162e40528ae9a313ce8e5a53cf\\kotlinx-serialization-json-jsir-1.5.0-RC.klib"
+    },
+    "ac5f0c9025061c6d929a315811f12348": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlinx\\kotlinx-serialization-core-js\\1.5.0-RC\\ed596d44ffea479ec69c3883f82c2f630de4646b\\kotlinx-serialization-core-jsir-1.5.0-RC.klib"
+    },
+    "9a9ac65ef95054b26ff40b74df6af625": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlin-stdlib-js\\1.8.0\\b4f5f83089cbb70f0b6d81ecffbf3cbf13f4a8b9\\kotlin-stdlib-js-1.8.0.jar",
+      "target": "kotlin\\1.8.0"
+    },
+    "78957761e7a6ec93fdb532c7c55f0fd4": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\io.ktor\\ktor-serialization-kotlinx-json-js\\2.2.2\\8ebca766ae895904c60912115abbb0df796106d4\\ktor-serialization-kotlinx-json-jsir-2.2.2.klib"
+    },
+    "66a38bf53d335c9f53c97b051d23479f": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\io.ktor\\ktor-serialization-kotlinx-js\\2.2.2\\7704133addb9000bcee6bcf8f72cd4ccd63ddea1\\ktor-serialization-kotlinx-jsir-2.2.2.klib"
+    },
+    "60d38f5d38fcac1a88a7c27c92525d01": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\io.ktor\\ktor-serialization-js\\2.2.2\\2e0e9a3d8c91705108e2b4edcc4d27f2f4db5df7\\ktor-serialization-jsir-2.2.2.klib"
+    },
+    "1645d0da7410cb1e8655888171cf4816": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\io.ktor\\ktor-websockets-js\\2.2.2\\c27c11e4636a0a5a42b97b849d8647e4541f1fde\\ktor-websockets-jsir-2.2.2.klib"
+    },
+    "53f53161157d7d15fd54a13979ecb21f": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\io.ktor\\ktor-http-js\\2.2.2\\add2762095c5ad1484f3692713716befd870674b\\ktor-http-jsir-2.2.2.klib"
+    },
+    "400eb4c6d74b172b03782f48547e2c68": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\io.ktor\\ktor-utils-js\\2.2.2\\8a1ca968393d045173775bd5230afe27073a8baa\\ktor-utils-jsir-2.2.2.klib"
+    },
+    "1551e4d64818cb66ac3c4c1ae9232d23": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\io.ktor\\ktor-io-js\\2.2.2\\bc6a5009b497192e023ea40a20ef3cbb4fa68f0f\\ktor-io-jsir-2.2.2.klib"
+    },
+    "87b37b026e9680692b36e7c4c08334c2": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlinx\\kotlinx-coroutines-core-js\\1.6.4\\791d62c16e6fad7cc9b1e6fafe88a3d454744d99\\kotlinx-coroutines-core-jsir-1.6.4.klib"
+    },
+    "489089308e6bacd4b18fc93c501bb01c": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlinx\\atomicfu-js\\0.17.3\\5fd992f78532945e29a1c54279eafffe2a0c95fe\\atomicfu-jsir-0.17.3.klib"
+    },
+    "68b4fc3260b20bef86b65f0a39fae75a": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\atomicfu\\1.6.21\\f486917a9c89e5c7d5d08009d58ad810a57a7011\\atomicfu-1.6.21.jar"
+    },
+    "1ac085e2f277a9a2ed0382b398248c53": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlin-test-js-runner\\1.8.0\\b4f77e5ecd9c56fc312d90cb0ab919ee452dfb4\\kotlin-test-js-runner-1.8.0.jar",
+      "target": "kotlin-test-js-runner\\1.8.0"
+    },
+    "56bbc18a109ef173ed9866aafa85f38b": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin-wrappers\\kotlin-emotion\\11.10.5-pre.490\\c435ccc3623cea89360f6251bbf41e30317896f1\\kotlin-emotion-11.10.5-pre.490.klib",
+      "target": "kotlin-wrappers-kotlin-emotion-js-ir\\11.10.5-pre.490"
+    },
+    "a7014ed7bbfb121690c1a3cdf0c470c4": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin-wrappers\\kotlin-react-core\\18.2.0-pre.490\\ddcb7f35bc452deb11a58a72b4d7bd8af4f65a27\\kotlin-react-core-18.2.0-pre.490.klib",
+      "target": "kotlin-wrappers-kotlin-react-core-js-ir\\18.2.0-pre.490"
+    },
+    "b59d1c862c0167faf98081527ffced1d": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin-wrappers\\kotlin-csstype\\3.1.1-pre.490\\63d62ec873e5cadd8d7f00b8f3c7b4fdff8dcd73\\kotlin-csstype-3.1.1-pre.490.klib",
+      "target": "kotlin-wrappers-kotlin-csstype-js-ir\\3.1.1-pre.490"
+    },
+    "87bd13360876972d101dd87e91cabfcc": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin-wrappers\\kotlin-browser\\1.0.0-pre.490\\36aeb6403f046b4ef4984f3193eb8631b253abe3\\kotlin-browser-1.0.0-pre.490.klib"
+    },
+    "721bfd62dddf9497af408f1b7f794220": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin-wrappers\\kotlin-web\\1.0.0-pre.490\\e5191f01af903a1e364d5f0ea824a1b1c022ccbb\\kotlin-web-1.0.0-pre.490.klib"
+    },
+    "a866c2b1433a2a16dd7d89e699d96d21": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin-wrappers\\kotlin-js\\1.0.0-pre.490\\e8a6830ff57391a89e6cbd3cd0d76dc5623c106b\\kotlin-js-1.0.0-pre.490.klib"
+    },
+    "8978156782575d52d3e915579783171d": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin-wrappers\\kotlin-react\\18.2.0-pre.490\\1f89569ad356a056a55b3175216c7101415e58f1\\kotlin-react-18.2.0-pre.490.klib"
+    },
+    "dc362d69ff1abef4b9219535eaa1b87c": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin-wrappers\\kotlin-react-dom\\18.2.0-pre.490\\416c718e89d120603545f8f88a8a838e8e3fcf3\\kotlin-react-dom-18.2.0-pre.490.klib",
+      "target": "kotlin-wrappers-kotlin-react-dom-js-ir\\18.2.0-pre.490"
+    },
+    "13370efd19aa31b36c200a64d2e0dad0": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin-wrappers\\kotlin-react-redux\\7.2.6-pre.490\\f6a15bd298f1ac5db9739fa732744047384c3a47\\kotlin-react-redux-7.2.6-pre.490.klib",
+      "target": "kotlin-wrappers-kotlin-react-redux-js-ir\\7.2.6-pre.490"
+    },
+    "f877cbf8d5276c0f9df5601d700c1e1e": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin-wrappers\\kotlin-redux\\4.1.2-pre.490\\6c2e4a88f95a113ac03ed8026a9e22340c0fc28f\\kotlin-redux-4.1.2-pre.490.klib",
+      "target": "kotlin-wrappers-kotlin-redux-js-ir\\4.1.2-pre.490"
+    },
+    "9edb299c2d4cdbf38f6b52a5b4898d05": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin-wrappers\\kotlin-extensions\\1.0.1-pre.490\\635b3055f006e1304ff2a7170ab1b8be27a1b7c1\\kotlin-extensions-1.0.1-pre.490.klib"
+    },
+    "6fd892fdca76cb27a5c9499301800e04": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin-wrappers\\kotlin-react-legacy\\18.2.0-pre.490\\d4a133e9dc53a02a9b1b7da374b62efc4b54c142\\kotlin-react-legacy-18.2.0-pre.490.klib"
+    },
+    "d8d01895a85ab8e877378bf1b01af134": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin-wrappers\\kotlin-react-router-dom\\6.3.0-pre.490\\fa0f1e3d84bf71e70af66b3f7a7de594dece5a0a\\kotlin-react-router-dom-6.3.0-pre.490.klib",
+      "target": "kotlin-wrappers-kotlin-react-router-dom-js-ir\\6.3.0-pre.490"
+    },
+    "8d8f7ccfad5ac2f5ff849aa974eebac5": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin-wrappers\\kotlin-history\\5.3.0-pre.490\\6df7cdeb2b7a0a06f40085054e726e72ed47f09e\\kotlin-history-5.3.0-pre.490.klib",
+      "target": "kotlin-wrappers-kotlin-history-js-ir\\5.3.0-pre.490"
+    },
+    "5926ac243e22abf9fbd6f7e694c16169": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin-wrappers\\kotlin-tanstack-react-query\\4.24.4-pre.490\\bf44b92eaa415d9c74045a42d37ecf26c62c2ded\\kotlin-tanstack-react-query-4.24.4-pre.490.klib",
+      "target": "kotlin-wrappers-kotlin-tanstack-react-query-js-ir\\4.24.4-pre.490"
+    },
+    "0711451e34b873e420beddf9532595b2": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin-wrappers\\kotlin-tanstack-query-core\\4.24.4-pre.490\\b1635a372ffaf36363e3aab0fb4773caf304a6f4\\kotlin-tanstack-query-core-4.24.4-pre.490.klib",
+      "target": "kotlin-wrappers-kotlin-tanstack-query-core-js-ir\\4.24.4-pre.490"
+    },
+    "142ccceb071b9a879ba5bf19965f3c39": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin-wrappers\\kotlin-tanstack-react-query-devtools\\4.24.4-pre.490\\176507b126a0d85693062d4b1b2b0b4b6268a8d8\\kotlin-tanstack-react-query-devtools-4.24.4-pre.490.klib",
+      "target": "kotlin-wrappers-kotlin-tanstack-react-query-devtools-js-ir\\4.24.4-pre.490"
+    },
+    "0a62abb6cf08e01efcae03737e0423a2": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlin-test-js\\1.8.0\\3af4dadff9462ba38f857b60a1352d5fec65d100\\kotlin-test-js-1.8.0.jar",
+      "target": "kotlin-test\\1.8.0"
+    }
+  }
+}

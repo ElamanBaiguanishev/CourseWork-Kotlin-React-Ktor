@@ -1,0 +1,15 @@
+{
+  "name": "kotlin-wrappers-kotlin-tanstack-react-query-devtools-js-ir",
+  "version": "4.24.4-pre.490",
+  "main": "kotlin-wrappers-kotlin-tanstack-react-query-devtools-js-ir.js",
+  "types": "kotlin-wrappers-kotlin-tanstack-react-query-devtools-js-ir.d.ts",
+  "devDependencies": {
+    "dukat": "0.5.8-rc.4"
+  },
+  "dependencies": {
+    "@tanstack/react-query-devtools": "^4.24.4"
+  },
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": []
+}

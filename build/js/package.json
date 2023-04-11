@@ -1,0 +1,29 @@
+{
+  "name": "course",
+  "version": "1.0-SNAPSHOT",
+  "private": true,
+  "workspaces": [
+    "packages\\course",
+    "packages\\course-test",
+    "packages_imported\\kotlin\\1.8.0",
+    "packages_imported\\kotlin-test-js-runner\\1.8.0",
+    "packages_imported\\kotlin-wrappers-kotlin-emotion-js-ir\\11.10.5-pre.490",
+    "packages_imported\\kotlin-wrappers-kotlin-react-core-js-ir\\18.2.0-pre.490",
+    "packages_imported\\kotlin-wrappers-kotlin-csstype-js-ir\\3.1.1-pre.490",
+    "packages_imported\\kotlin-wrappers-kotlin-react-dom-js-ir\\18.2.0-pre.490",
+    "packages_imported\\kotlin-wrappers-kotlin-react-redux-js-ir\\7.2.6-pre.490",
+    "packages_imported\\kotlin-wrappers-kotlin-redux-js-ir\\4.1.2-pre.490",
+    "packages_imported\\kotlin-wrappers-kotlin-react-router-dom-js-ir\\6.3.0-pre.490",
+    "packages_imported\\kotlin-wrappers-kotlin-history-js-ir\\5.3.0-pre.490",
+    "packages_imported\\kotlin-wrappers-kotlin-tanstack-react-query-js-ir\\4.24.4-pre.490",
+    "packages_imported\\kotlin-wrappers-kotlin-tanstack-query-core-js-ir\\4.24.4-pre.490",
+    "packages_imported\\kotlin-wrappers-kotlin-tanstack-react-query-devtools-js-ir\\4.24.4-pre.490",
+    "packages_imported\\kotlin-test\\1.8.0"
+  ],
+  "resolutions": {},
+  "devDependencies": {},
+  "dependencies": {},
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": []
+}

@@ -17,7 +17,7 @@ fun main() {
 val app = FC<Props>("App") {
     QueryClientProvider {
         client = QueryClient()
-        CTest {}
+//        CTest {}
         testInput {}
     }
 }

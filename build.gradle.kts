@@ -55,6 +55,8 @@ kotlin {
                 implementation("io.ktor:ktor-server-html-builder-jvm:2.2.2")
                 implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:0.7.2")
                 implementation("ch.qos.logback:logback-classic:1.4.5")
+                implementation("io.ktor:ktor-server-compression:2.2.2")
+                implementation("org.litote.kmongo:kmongo-coroutine-serialization:4.8.0")
             }
         }
         val jvmTest by getting {
@@ -72,6 +74,7 @@ kotlin {
                             "org.jetbrains.kotlin-wrappers:kotlin-wrappers-bom:1.0.0-pre.490"
                         )
                     )
+                    implementation("io.ktor:ktor-serialization-kotlinx-json:2.2.2")
                     implementation("org.jetbrains.kotlin-wrappers:kotlin-emotion")
                     implementation("org.jetbrains.kotlin-wrappers:kotlin-react")
                     implementation("org.jetbrains.kotlin-wrappers:kotlin-react-dom")

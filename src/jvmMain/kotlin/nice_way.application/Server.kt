@@ -3,18 +3,17 @@ package nice_way.application
 import io.ktor.serialization.kotlinx.json.*
 import io.ktor.server.application.*
 import io.ktor.server.engine.embeddedServer
-import io.ktor.server.html.*
-import io.ktor.server.http.content.*
 import io.ktor.server.netty.Netty
+import io.ktor.server.plugins.compression.*
 import io.ktor.server.plugins.contentnegotiation.*
 import io.ktor.server.routing.*
-import kotlinx.coroutines.delay
-import kotlinx.html.*
+import nice_way.application.rest.documentRoutes
 
 fun main() {
+    val port = System.getenv("PORT")?.toInt() ?: 8080
     embeddedServer(
         Netty,
-        port = 8080,
+        port = port,
         host = "127.0.0.1",
         watchPaths = listOf("classes")
     ) {
@@ -25,13 +24,16 @@ fun main() {
 fun Application.main(isTest: Boolean = true) {
     config(isTest)
     static()
-//    rest()
+    rest()
     if (isTest) logRoute()
 }
 
 fun Application.config(isTest: Boolean) {
     install(ContentNegotiation) {
         json()
+    }
+    install(Compression) {
+        gzip()
     }
 /*    if (isTest) {
         createTestData()
@@ -43,8 +45,8 @@ fun Application.config(isTest: Boolean) {
     }*/
 }
 
-//fun Application.rest() {
-//    routing {
-//
-//    }
-//}
+fun Application.rest() {
+    routing {
+        documentRoutes()
+    }
+}

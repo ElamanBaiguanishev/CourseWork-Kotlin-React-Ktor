@@ -48,6 +48,7 @@ kotlin {
         }
         val jvmMain by getting {
             dependencies {
+                implementation("org.jbibtex:jbibtex:1.0.20")
                 implementation("io.ktor:ktor-server-core:2.2.2")
                 implementation("io.ktor:ktor-server-netty:2.2.2")
                 implementation("io.ktor:ktor-server-content-negotiation:2.2.2")

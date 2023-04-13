@@ -1,10 +1,9 @@
-import components.CTest
+import components.CReadCriterion
+import components.testInput
 import react.FC
 import react.Props
 import react.create
 import react.dom.client.createRoot
-import react.dom.html.ReactHTML.li
-import react.dom.html.ReactHTML.ol
 import tanstack.query.core.QueryClient
 import tanstack.react.query.QueryClientProvider
 
@@ -16,6 +15,7 @@ fun main() {
 val app = FC<Props>("App") {
     QueryClientProvider {
         client = QueryClient()
-        CTest{}
+        testInput {}
+        CReadCriterion {}
     }
 }

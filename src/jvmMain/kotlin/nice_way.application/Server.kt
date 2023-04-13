@@ -8,6 +8,8 @@ import io.ktor.server.plugins.compression.*
 import io.ktor.server.plugins.contentnegotiation.*
 import io.ktor.server.routing.*
 import nice_way.application.rest.documentRoutes
+import nice_way.application.rest.readRoutes
+import nice_way.application.rest.uploadRoutes
 
 fun main() {
     val port = System.getenv("PORT")?.toInt() ?: 8080
@@ -48,5 +50,7 @@ fun Application.config(isTest: Boolean) {
 fun Application.rest() {
     routing {
         documentRoutes()
+        uploadRoutes()
+        readRoutes()
     }
 }

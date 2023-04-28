@@ -113,6 +113,9 @@
     "0a62abb6cf08e01efcae03737e0423a2": {
       "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlin-test-js\\1.8.0\\3af4dadff9462ba38f857b60a1352d5fec65d100\\kotlin-test-js-1.8.0.jar",
       "target": "kotlin-test\\1.8.0"
+    },
+    "2ee3f991d84b21d4523ab775a38bec16": {
+      "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\org.jbibtex\\jbibtex\\1.0.20\\7b454f27a2481820aa3c138dc104c6ca51e85943\\jbibtex-1.0.20.jar"
     }
   }
 }

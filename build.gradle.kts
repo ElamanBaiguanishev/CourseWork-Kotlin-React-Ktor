@@ -42,6 +42,7 @@ kotlin {
             dependencies {
                 implementation(kotlin("stdlib-common"))
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0-RC")
+//                implementation("org.jbibtex:jbibtex:1.0.20")
             }
         }
         val commonTest by getting {
@@ -60,7 +61,16 @@ kotlin {
                 implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:0.7.2")
                 implementation("ch.qos.logback:logback-classic:1.4.5")
                 implementation("io.ktor:ktor-server-compression:2.2.2")
-                implementation("org.litote.kmongo:kmongo-coroutine-serialization:4.8.0")
+
+                implementation("io.github.microutils:kotlin-logging-jvm:2.1.21")
+                implementation("org.litote.kmongo:kmongo-serialization:4.5.0")
+                implementation("org.litote.kmongo:kmongo-id-serialization:4.5.0")
+                implementation("org.json:json:20220320")
+                implementation("org.junit.jupiter:junit-jupiter-api:5.8.2")
+                implementation("org.junit.jupiter:junit-jupiter-engine:5.8.2")
+
+                implementation("org.slf4j:slf4j-api:1.7.36")
+                implementation("org.slf4j:slf4j-log4j12:1.7.36")
             }
         }
         val jvmTest by getting {
@@ -78,6 +88,7 @@ kotlin {
                             "org.jetbrains.kotlin-wrappers:kotlin-wrappers-bom:1.0.0-pre.490"
                         )
                     )
+                    implementation("org.jbibtex:jbibtex:1.0.20")
                     implementation("io.ktor:ktor-serialization-kotlinx-json:2.2.2")
                     implementation("org.jetbrains.kotlin-wrappers:kotlin-emotion")
                     implementation("org.jetbrains.kotlin-wrappers:kotlin-react")
@@ -87,6 +98,7 @@ kotlin {
                     implementation("org.jetbrains.kotlin-wrappers:kotlin-tanstack-react-query")
                     implementation("org.jetbrains.kotlin-wrappers:kotlin-tanstack-react-query-devtools")
                     implementation(npm("cross-fetch", "3.1.5"))
+                    implementation(npm("bibtex", "0.9.0"))
                 }
             }
         }

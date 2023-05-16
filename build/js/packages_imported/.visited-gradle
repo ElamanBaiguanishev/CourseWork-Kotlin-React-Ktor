@@ -116,6 +116,18 @@
     },
     "2ee3f991d84b21d4523ab775a38bec16": {
       "src": "C:\\Users\\Elaman\\.gradle\\caches\\modules-2\\files-2.1\\org.jbibtex\\jbibtex\\1.0.20\\7b454f27a2481820aa3c138dc104c6ca51e85943\\jbibtex-1.0.20.jar"
+    },
+    "ebe3bb84bcca327591223654e61a6281": {
+      "src": "C:\\Users\\User\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlin-stdlib-common\\1.8.21\\d749cd5ae25da36d06e5028785038e24f9d37976\\kotlin-stdlib-common-1.8.21.jar"
+    },
+    "66517d21178b9d0f3eada494a10af281": {
+      "src": "C:\\Users\\User\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlin-reflect\\1.8.21\\662838019bc1141f8a311180d93b9e13765c7f55\\kotlin-reflect-1.8.21.jar"
+    },
+    "e10d6223dd343bb0e0cc0c95e9213ac6": {
+      "src": "C:\\Users\\User\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlin-stdlib\\1.8.21\\43d50ab85bc7587adfe3dda3dbe579e5f8d51265\\kotlin-stdlib-1.8.21.jar"
+    },
+    "72ac29dee68b63d11710f49a42861308": {
+      "src": "C:\\Users\\User\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains\\annotations\\13.0\\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9\\annotations-13.0.jar"
     }
   }
 }

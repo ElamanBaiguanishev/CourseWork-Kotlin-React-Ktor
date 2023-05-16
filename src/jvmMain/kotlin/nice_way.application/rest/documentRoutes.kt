@@ -1,17 +1,19 @@
 package nice_way.application.rest
 
 import config.Config
+import data.BibTex
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import nice_way.application.mongo.collection
-import nice_way.application.repos.read
+import org.litote.kmongo.eq
+import org.litote.kmongo.findOne
 
 fun Route.documentRoutes() {
     route(Config.documentsPath) {
         get {
-            val a = collection.read().toList()
+            val a = collection.find().toList()
             call.respond(a)
         }
         get("{id}") {
@@ -20,7 +22,7 @@ fun Route.documentRoutes() {
                     "Missing or malformed id",
                     status = HttpStatusCode.BadRequest
                 )
-            val bibTex = collection.read(id) ?: return@get call.respondText(
+            val bibTex = collection.findOne(BibTex::_id eq id) ?: return@get call.respondText(
                 "No element with id $id",
                 status = HttpStatusCode.NotFound
             )

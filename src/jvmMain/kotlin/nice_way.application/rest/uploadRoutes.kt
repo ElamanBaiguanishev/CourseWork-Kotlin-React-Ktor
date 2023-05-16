@@ -9,7 +9,7 @@ import io.ktor.server.request.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import nice_way.application.mongo.collection
-import nice_way.application.repos.create
+import org.litote.kmongo.newId
 import java.io.File
 
 fun Route.uploadRoutes() {
@@ -23,7 +23,8 @@ fun Route.uploadRoutes() {
         }
         post {
             val bibtex = call.receive<BibTex>()
-            collection.create(bibtex)
+            bibtex.createId(newId<BibTex>().toString())
+            collection.insertOne(bibtex)
             call.respondText(
                 "Element stored correctly",
                 status = HttpStatusCode.Created

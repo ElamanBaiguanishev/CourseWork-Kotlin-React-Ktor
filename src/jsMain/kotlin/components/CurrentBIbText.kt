@@ -1,7 +1,7 @@
 package components
 
 import config.Config
-import item.Item
+import data.BibTex
 import js.core.get
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
@@ -29,12 +29,12 @@ val CBibtex = FC<Props>("Test") {
     else if (query.isError) div { +"Error!" }
     else {
         val item =
-            Json.decodeFromString<Item>(query.data ?: "")
+            Json.decodeFromString<BibTex>(query.data ?: "")
         div {
-            +item.elem.map().toString()
+            +item.map().toString()
         }
         CEditInputFIle{
-            fields = item.elem.map()
+            fields = item.map()
         }
     }
 }

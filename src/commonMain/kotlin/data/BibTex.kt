@@ -1,9 +1,13 @@
 package data
 
+import kotlinx.serialization.Contextual
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+typealias BibTexId = String
 @Serializable
 data class BibTex(
+    @Contextual @SerialName("_id") val _id: BibTexId,
     val type: String,
     val tag: String,
     val author: String? = null,
@@ -22,6 +26,28 @@ data class BibTex(
     val edition: String? = null,
     val organization: String? = null
 ) {
+    fun createId(newId: BibTexId) =
+        BibTex(
+            newId,
+            type,
+            tag,
+            author,
+            title,
+            journal,
+            year,
+            volume,
+            number,
+            pages,
+            month,
+            note,
+            key,
+            publisher,
+            series,
+            address,
+            edition,
+            organization
+        )
+
     fun map(): MutableMap<String?, String?> {
         return mutableMapOf(
             "type" to type,

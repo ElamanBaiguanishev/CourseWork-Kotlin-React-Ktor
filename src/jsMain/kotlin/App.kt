@@ -1,6 +1,7 @@
 import components.CBibtex
 import components.CBibtexList
 import components.CInputFileBibtex
+import components.CReadCriterion
 import config.Config
 import react.FC
 import react.Props
@@ -30,10 +31,18 @@ val app = FC<Props>("App") {
                 +"Добавить"
                 to = "addBibTex"
             }
+            Link {
+                +"Найти"
+                to = "findBibTex"
+            }
             Routes {
                 Route {
                     path = "addBibTex"
                     element = CInputFileBibtex.create()
+                }
+                Route {
+                    path = "findBibTex"
+                    element = CReadCriterion.create()
                 }
                 Route {
                     path = Config.documentsPath

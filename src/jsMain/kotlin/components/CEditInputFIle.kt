@@ -74,6 +74,7 @@ val CEditInputFIle = FC<EditFileProps>("EditFile") { props ->
         onClick = {
             addMutation.mutate(
                 BibTex(
+                    _id = props.fields["id"]!!,
                     type = props.fields["type"]!!,
                     tag = props.fields["tag"]!!,
                     author = props.fields["author"],

@@ -17,8 +17,8 @@ val CInputFileBibtex = FC<Props>("inputText") {
         }
     val params = Regex("@([a-zA-Z]+) *\\{ *(.+),")
         .findAll(result)
-        .map {
-            it.groups.map {
+        .map { matchResult ->
+            matchResult.groups.map {
                 it?.value to it?.value
             }
         }.flatten().toMap()

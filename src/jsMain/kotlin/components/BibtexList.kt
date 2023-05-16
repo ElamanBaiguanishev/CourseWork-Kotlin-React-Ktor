@@ -1,7 +1,7 @@
 package components
 
 import config.Config
-import item.Item
+import data.BibTex
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 import query.QueryError
@@ -27,7 +27,7 @@ val CBibtexList = FC<Props>("Test") {
     else if (query.isError) ReactHTML.div { +"Error!" }
     else {
         val items =
-            Json.decodeFromString<List<Item>>(query.data ?: "")
+            Json.decodeFromString<List<BibTex>>(query.data ?: "")
         ol {
             for (i in items) {
                 li {

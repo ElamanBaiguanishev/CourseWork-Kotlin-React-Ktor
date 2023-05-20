@@ -1,8 +1,10 @@
-package components
+package components.find
 
 import config.Config
 import data.BibTex
+import kotlinx.serialization.Serializable
 import kotlinx.serialization.decodeFromString
+import kotlinx.serialization.encodeToString
 import react.FC
 import react.Props
 import tanstack.query.core.QueryKey
@@ -12,20 +14,16 @@ import kotlinx.serialization.json.Json
 import query.QueryError
 import tanstack.react.query.UseBaseQueryResult
 
-external interface FindProps: Props {
+external interface FindProps : Props {
+    var component: FC<ShowProps>
     var criterions: List<String>
+    var keys: List<Pair<String, QueryKey>>
 }
 
-val CFindAnyCriterion = FC<FindProps>("Find") { props ->
-    val keys = listOf(
-        "findAuthor" to arrayOf("author").unsafeCast<QueryKey>(),
-        "findTitle" to arrayOf("title").unsafeCast<QueryKey>(),
-        "findYear" to arrayOf("year").unsafeCast<QueryKey>(),
-        "findAny" to arrayOf("any").unsafeCast<QueryKey>()
-        )
-
+val CFindCriterion = FC<FindProps>("Find") { props ->
     val queries = mutableListOf<UseBaseQueryResult<String, QueryError>>()
-    keys.forEachIndexed { index, (param, key)->
+
+    props.keys.forEachIndexed { index, (param, key) ->
         queries.add(
             useQuery<String, QueryError, String, QueryKey>(
                 queryKey = key,
@@ -45,7 +43,12 @@ val CFindAnyCriterion = FC<FindProps>("Find") { props ->
             files.add(Json.decodeFromString<List<BibTex>>(query.data ?: ""))
         }
     }
-    CShowInfo {
+
+    props.component {
         this.files = files
+        this.professorName = props.criterions[0]
+        this.name = props.criterions[1]
+        this.zavName = props.criterions[2]
+        this.secName = props.criterions[3]
     }
 }

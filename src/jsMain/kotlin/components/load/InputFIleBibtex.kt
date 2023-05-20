@@ -1,4 +1,4 @@
-package components
+package components.load
 
 import js.core.get
 import react.FC

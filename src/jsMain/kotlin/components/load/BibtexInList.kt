@@ -1,4 +1,4 @@
-package components
+package components.load
 
 import data.BibTex
 import react.*
@@ -11,7 +11,7 @@ external interface BibtexInListProps : Props {
     var item: BibTex
 }
 
-val CBibTexInList = FC<BibtexInListProps>("Read") { props ->
+val  CBibTexInList = FC<BibtexInListProps>("Read") { props ->
     li {
         props.item.map().forEach {(name, prop) ->
             table {

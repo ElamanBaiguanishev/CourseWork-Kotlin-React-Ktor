@@ -1,5 +1,6 @@
-package components
+package components.find
 
+import components.load.CBibTexInList
 import data.BibTex
 import react.*
 import react.dom.html.ReactHTML.details
@@ -12,6 +13,10 @@ import react.dom.html.ReactHTML.tr
 
 external interface ShowProps : Props {
     var files: MutableList<List<BibTex>>
+    var professorName: String
+    var name: String
+    var zavName: String
+    var secName: String
 }
 
 val CShowInfo = FC<ShowProps>("Read") { props ->

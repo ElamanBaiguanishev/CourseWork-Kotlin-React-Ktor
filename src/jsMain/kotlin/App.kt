@@ -1,7 +1,8 @@
-import components.CBibtex
-import components.CBibtexList
-import components.CInputFileBibtex
-import components.CReadCriterion
+import components.find.CReadCriterion
+import components.form.CForm
+import components.load.CBibtex
+import components.load.CBibtexList
+import components.load.CInputFileBibtex
 import config.Config
 import react.FC
 import react.Props
@@ -35,6 +36,10 @@ val app = FC<Props>("App") {
                 +"Найти"
                 to = "findBibTex"
             }
+            Link {
+                +"Сформировать"
+                to = "form"
+            }
             Routes {
                 Route {
                     path = "addBibTex"
@@ -51,6 +56,10 @@ val app = FC<Props>("App") {
                 Route {
                     path = Config.documentsPath + ":id"
                     element = CBibtex.create()
+                }
+                Route {
+                    path = "form"
+                    element = CForm.create()
                 }
             }
         }

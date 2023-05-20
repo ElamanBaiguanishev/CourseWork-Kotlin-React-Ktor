@@ -1,4 +1,4 @@
-package components
+package components.find
 
 import react.*
 import react.dom.html.ReactHTML.button
@@ -8,6 +8,7 @@ import react.dom.html.ReactHTML.summary
 import react.dom.html.ReactHTML.table
 import react.dom.html.ReactHTML.td
 import react.dom.html.ReactHTML.tr
+import tanstack.query.core.QueryKey
 import web.html.HTMLInputElement
 
 val CReadCriterion = FC<Props>("Read") {
@@ -53,7 +54,14 @@ val CReadCriterion = FC<Props>("Read") {
         }
 
         "start" -> {
-            CFindAnyCriterion {
+            CFindCriterion {
+                this.component = CShowInfo
+                this.keys = listOf(
+                    "findAuthor" to arrayOf("author").unsafeCast<QueryKey>(),
+                    "findTitle" to arrayOf("title").unsafeCast<QueryKey>(),
+                    "findYear" to arrayOf("year").unsafeCast<QueryKey>(),
+                    "findAny" to arrayOf("any").unsafeCast<QueryKey>()
+                )
                 this.criterions =
                     listOf(
                         findAuthor.current?.value!!,

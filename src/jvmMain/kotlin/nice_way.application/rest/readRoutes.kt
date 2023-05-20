@@ -6,19 +6,33 @@ import io.ktor.server.application.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import nice_way.application.mongo.collection
-import org.litote.kmongo.coroutine.toList
 import org.litote.kmongo.eq
 
 fun Route.readRoutes() {
     val properties = listOf(
-        BibTex::author,
-        BibTex::year,
-        BibTex::pages,
+        BibTex::_id,
+        BibTex::tag,
+        BibTex::type,
         BibTex::journal,
+        BibTex::volume,
         BibTex::number,
-        BibTex::title,
-        BibTex::volume
+        BibTex::pages,
+        BibTex::month,
+        BibTex::note,
+        BibTex::key,
+        BibTex::publisher,
+        BibTex::series,
+        BibTex::address,
+        BibTex::address,
+        BibTex::organization,
     )
+
+    val finds = mapOf(
+        "findAuthor:{criterion}" to BibTex::author,
+        "findTitle:{criterion}" to BibTex::title,
+        "findYear:{criterion}" to BibTex::year,
+        )
+
     route(Config.readPath) {
         get {
             val criterionRequest = call.request.queryParameters["criterion"]
@@ -33,7 +47,21 @@ fun Route.readRoutes() {
                 call.respond(documents)
             }
         }
-        get("find:{criterion}") {
+
+        finds.forEach { (attr, prop) ->
+            get (attr) {
+                val criterion = call.parameters["criterion"]!!
+                val documents = collection.find( prop eq criterion).toList()
+
+                if (documents.isEmpty()) {
+                    call.respond (emptyList<BibTex>())
+                } else {
+                    call.respond(documents)
+                }
+            }
+        }
+
+        get("findAny:{criterion}") {
             val criterion = call.parameters["criterion"]!!
             val documents =
                 properties

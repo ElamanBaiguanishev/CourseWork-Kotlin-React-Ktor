@@ -2,6 +2,7 @@ package components.load
 
 import config.Config
 import csstype.Border
+import csstype.ClassName
 import csstype.LineStyle
 import csstype.px
 import data.BibTex
@@ -51,22 +52,14 @@ val CEditInputFIle = FC<EditFileProps>("EditFile") { props ->
         }
     }
     table {
-        css {
-            border = Border(1.px, LineStyle.solid)
-        }
+        className = ClassName("table-items")
         map.map { (key, value) ->
             tr {
                 if (key != null && value != null) {
                     td {
-                        css {
-                            border = Border(1.px, LineStyle.solid)
-                        }
                         +key
                     }
                     td {
-                        css {
-                            border = Border(1.px, LineStyle.solid)
-                        }
                         +value
                     }
                     td {

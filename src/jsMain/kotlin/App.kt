@@ -4,14 +4,18 @@ import components.load.CInputFileBibtex
 import components.find.CReadCriterion
 import components.form.CForm
 import config.Config
+import csstype.ClassName
 import csstype.Color
 import emotion.react.css
 import react.FC
 import react.Props
 import react.create
 import react.dom.client.createRoot
+import react.dom.html.ReactHTML
 import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.footer
+import react.dom.html.ReactHTML.header
+import react.dom.html.ReactHTML.nav
 import react.router.Route
 import react.router.Routes
 import react.router.dom.HashRouter
@@ -28,21 +32,25 @@ val app = FC<Props>("App") {
     HashRouter {
         QueryClientProvider {
             client = QueryClient()
-            Link {
-                +"Список"
-                to = Config.uploadPath
-            }
-            Link {
-                +"Добавить"
-                to = "addBibTex"
-            }
-            Link {
-                +"Найти"
-                to = "findBibTex"
-            }
-            Link {
-                +"Сформировать"
-                to = "form"
+            header {
+                nav {
+                    Link {
+                        +"Список"
+                        to = Config.uploadPath
+                    }
+                    Link {
+                        +"Добавить"
+                        to = "addBibTex"
+                    }
+                    Link {
+                        +"Найти"
+                        to = "findBibTex"
+                    }
+                    Link {
+                        +"Сформировать"
+                        to = "form"
+                    }
+                }
             }
             Routes {
                 Route {
@@ -68,11 +76,10 @@ val app = FC<Props>("App") {
             }
         }
     }
-    div {
-        footer {
-            css {
-                background = Color("Black")
-            }
+    footer {
+        className = ClassName("footer")
+        div {
+            +"eleman"
         }
     }
 }

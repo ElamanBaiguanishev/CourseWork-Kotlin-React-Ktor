@@ -14,6 +14,10 @@ fun HTML.index() {
             rel = "icon"
             href = "data:,"
         }
+        link {
+            rel = "stylesheet"
+            href = "/static/my.css"
+        }
     }
     body {
         div {

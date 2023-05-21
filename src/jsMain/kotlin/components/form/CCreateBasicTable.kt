@@ -2,13 +2,7 @@ package components.form
 
 import components.find.ShowProps
 import csstype.*
-import csstype.BorderCollapse.Companion.collapse
-import csstype.FontStyle.Companion.italic
-import csstype.LineStyle.Companion.solid
-import emotion.react.css
 import react.FC
-import react.dom.html.ReactHTML.br
-import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.h1
 import react.dom.html.ReactHTML.h2
 import react.dom.html.ReactHTML.table
@@ -21,68 +15,35 @@ val CCreateBasicTable = FC<ShowProps>("Find") { props ->
     val listCheck = props.files.flatten()
     val currentDate = Date().toLocaleDateString()
 
-    h1 { //Заголовок 1
-        css {
-            textAlign = TextAlign.Companion.center
-        }
+    h1 {
+        className = ClassName("header")
         +"Список"
     }
-    h2 { // Заголовок 2
-        css {
-            textAlign = TextAlign.Companion.center
-        }
+    h2 {
+        className = ClassName("header")
         +"Опубликованных учебных изданий и научных трудов профессора ${props.professorName}"
     }
     table {
-        css {
-            textAlign = TextAlign.Companion.center
-            width = 900.px
-            borderCollapse = collapse
-            borderWidth = 2.px
-            borderStyle = solid
-        }
+        className = ClassName("topTable")
+
         tr { //Создание строки таблицы
             // Шапка таблицы
             td { //Создание ячейки таблицы
-                css {
-                    borderWidth = 2.px
-                    borderStyle = solid
-                }
                 +"№"
             }
             td {
-                css {
-                    borderWidth = 2.px
-                    borderStyle = solid
-                }
                 +"Наименование учебных публикаций, научных работ и патентов на изобретения и другие объекты интеллектуальной собственности"
             }
             td {
-                css {
-                    borderWidth = 2.px
-                    borderStyle = solid
-                }
                 +"Форма учебных изданий и научных трудов"
             }
             td {
-                css {
-                    borderWidth = 2.px
-                    borderStyle = solid
-                }
                 +"Выходные данные"
             }
             td {
-                css {
-                    borderWidth = 2.px
-                    borderStyle = solid
-                }
                 +"Объем"
             }
             td {
-                css {
-                    borderWidth = 2.px
-                    borderStyle = solid
-                }
                 +"Соавторы"
             }
         }
@@ -92,62 +53,40 @@ val CCreateBasicTable = FC<ShowProps>("Find") { props ->
         }
     }
     table {
-
-        css {
-            width = 900.px
-            margin = Auto.auto
-        }
-        css {
-            width = 900.px
-            margin = Auto.auto
-        }
+        className = ClassName("bottomTable")
         tr {
             td {
-                css {
-                    textAlign = TextAlign.Companion.left
-                }
+                className  = ClassName("leftTd")
                 +"Соискатель"
             }
             td {
-                css {
-                    textAlign = TextAlign.Companion.right
-                }
+                className  = ClassName("rightTd")
                 +"______________${props.name}"
             }
         }
         tr {
             td {
-                css {
-                    textAlign = TextAlign.Companion.left
-                }
+                className  = ClassName("leftTd")
                 +"Зав. кафедрой ____________"
             }
             td {
-                css {
-                    textAlign = TextAlign.Companion.right
-                }
+                className  = ClassName("rightTd")
                 +"______________${props.zavName}"
             }
         }
         tr {
             td {
-                css {
-                    textAlign = TextAlign.Companion.left
-                }
+                className  = ClassName("leftTd")
                 +"Ученый секретарь ученого совета"
             }
             td {
-                css {
-                    textAlign = TextAlign.Companion.right
-                }
+                className  = ClassName("rightTd")
                 +"______________${props.secName}"
             }
         }
         tr {
             td {
-                css {
-                    textAlign = TextAlign.Companion.left
-                }
+                className  = ClassName("leftTd")
                 +currentDate
             }
         }

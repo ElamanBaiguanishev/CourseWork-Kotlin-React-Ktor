@@ -55,3 +55,34 @@ nav a {
   color: black;
   text-align: center;
 }
+
+.header {
+    text-align: center;
+}
+
+td {
+    border-width: 2px;
+    border-style: solid;
+}
+
+.leftTd {
+    border-width: 0px
+}
+
+.rightTd {
+    border-width: 0px
+}
+
+.topTable {
+    text-align: center;
+    width: 1400px;
+    border-collapse: collapse;
+    border-width: 2px;
+    border-style: solid;
+    margin: auto;
+}
+
+.bottomTable {
+    width: 2100px;
+    margin: auto;
+}

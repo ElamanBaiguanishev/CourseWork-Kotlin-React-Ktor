@@ -2,16 +2,12 @@ import components.load.CBibtex
 import components.load.CBibtexList
 import components.load.CInputFileBibtex
 import components.find.CReadCriterion
-import components.form.CForm
 import config.Config
 import csstype.ClassName
-import csstype.Color
-import emotion.react.css
 import react.FC
 import react.Props
 import react.create
 import react.dom.client.createRoot
-import react.dom.html.ReactHTML
 import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.footer
 import react.dom.html.ReactHTML.header
@@ -59,7 +55,9 @@ val app = FC<Props>("App") {
                 }
                 Route {
                     path = "findBibTex"
-                    element = CReadCriterion.create()
+                    element = CReadCriterion.create {
+                        this.form = false
+                    }
                 }
                 Route {
                     path = Config.uploadPath
@@ -71,7 +69,9 @@ val app = FC<Props>("App") {
                 }
                 Route {
                     path = "form"
-                    element = CForm.create()
+                    element = CReadCriterion.create {
+                        this.form = true
+                    }
                 }
             }
         }
@@ -79,7 +79,7 @@ val app = FC<Props>("App") {
     footer {
         className = ClassName("footer")
         div {
-            +"eleman"
+            +"GoOgLe CoRp. PrOJeCt"
         }
     }
 }

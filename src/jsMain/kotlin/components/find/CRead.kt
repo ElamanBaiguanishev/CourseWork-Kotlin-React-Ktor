@@ -1,5 +1,6 @@
 package components.find
 
+import components.form.CCreateBasicTable
 import react.*
 import react.dom.html.ReactHTML.button
 import react.dom.html.ReactHTML.details
@@ -11,21 +12,34 @@ import react.dom.html.ReactHTML.tr
 import tanstack.query.core.QueryKey
 import web.html.HTMLInputElement
 
-val CReadCriterion = FC<Props>("Read") {
-    var stub by useState("stop")
-    val findAuthor = useRef<HTMLInputElement>()
-    val findYear = useRef<HTMLInputElement>()
-    val findTitle = useRef<HTMLInputElement>()
-    val findAny = useRef<HTMLInputElement>()
+external interface ReadProps : Props {
+    var form: Boolean
+}
 
-    val finds = listOf(
-        "Поиск по автору" to findAuthor,
-        "Поиск по названию" to findTitle,
-        "Поиск по году" to findYear,
-        )
+val CReadCriterion = FC<ReadProps>("Read") { props ->
+    var stub by useState("stop")
+    val inputOne = useRef<HTMLInputElement>()
+    val inputTwo = useRef<HTMLInputElement>()
+    val inputThree = useRef<HTMLInputElement>()
+    val inputFour = useRef<HTMLInputElement>()
+
+    val finds =
+        if (props.form)
+            listOf(
+                "Введите имя интересующего вас профессора: " to inputOne,
+                "Введите ваше ФИО: " to inputTwo,
+                "Введите ФИО заведующего кафедрой: " to inputThree,
+                "Введите ФИО Ученого секретаря ученого совета: " to inputFour,
+            )
+        else
+            listOf(
+                "Поиск по автору" to inputOne,
+                "Поиск по названию" to inputThree,
+                "Поиск по году" to inputTwo,
+            )
 
     table {
-        finds.forEach { (name, reference)->
+        finds.forEach { (name, reference) ->
             tr {
                 td {
                     +name
@@ -38,14 +52,16 @@ val CReadCriterion = FC<Props>("Read") {
             }
         }
     }
-    details {
-        summary { +"Расшренный поиск" }
-        input {
-            ref = findAny
+    if (!props.form){
+        details {
+            summary { +"Расшренный поиск" }
+            input {
+                ref = inputFour
+            }
         }
     }
 
-    when(stub) {
+    when (stub) {
         "stop" -> button {
             +"find"
             onClick = {
@@ -55,7 +71,7 @@ val CReadCriterion = FC<Props>("Read") {
 
         "start" -> {
             CFindCriterion {
-                this.component = CShowInfo
+                this.component = if (props.form) CCreateBasicTable else CShowInfo
                 this.keys = listOf(
                     "findAuthor" to arrayOf("author").unsafeCast<QueryKey>(),
                     "findTitle" to arrayOf("title").unsafeCast<QueryKey>(),
@@ -64,15 +80,19 @@ val CReadCriterion = FC<Props>("Read") {
                 )
                 this.criterions =
                     listOf(
-                        findAuthor.current?.value!!,
-                        findTitle.current?.value!!,
-                        findYear.current?.value!!,
-                        findAny.current?.value!!,
+                        inputOne.current?.value!!,
+                        inputThree.current?.value!!,
+                        inputTwo.current?.value!!,
+                        inputFour.current?.value!!,
                     )
             }
             button {
                 +"clear"
                 onClick = {
+                    inputOne.current?.value= ""
+                    inputThree.current?.value= ""
+                    inputTwo.current?.value= ""
+                    inputFour.current?.value= ""
                     stub = "stop"
                 }
             }

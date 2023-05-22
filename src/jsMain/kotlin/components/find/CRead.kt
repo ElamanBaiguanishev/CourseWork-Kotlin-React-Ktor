@@ -4,6 +4,7 @@ import components.form.CCreateBasicTable
 import react.*
 import react.dom.html.ReactHTML.button
 import react.dom.html.ReactHTML.details
+import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.input
 import react.dom.html.ReactHTML.summary
 import react.dom.html.ReactHTML.table
@@ -86,14 +87,16 @@ val CReadCriterion = FC<ReadProps>("Read") { props ->
                         inputFour.current?.value!!,
                     )
             }
-            button {
-                +"clear"
-                onClick = {
-                    inputOne.current?.value= ""
-                    inputThree.current?.value= ""
-                    inputTwo.current?.value= ""
-                    inputFour.current?.value= ""
-                    stub = "stop"
+            div {
+                button {
+                    +"clear"
+                    onClick = {
+                        inputOne.current?.value = ""
+                        inputThree.current?.value = ""
+                        inputTwo.current?.value = ""
+                        inputFour.current?.value = ""
+                        stub = "stop"
+                    }
                 }
             }
         }

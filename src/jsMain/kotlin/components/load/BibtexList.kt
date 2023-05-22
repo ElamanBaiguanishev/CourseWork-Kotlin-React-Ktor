@@ -8,8 +8,10 @@ import query.QueryError
 import react.FC
 import react.Props
 import react.dom.html.ReactHTML
+import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.li
 import react.dom.html.ReactHTML.ol
+import react.dom.html.ReactHTML.span
 import react.router.dom.Link
 import tanstack.query.core.QueryKey
 import tanstack.react.query.useQuery
@@ -32,8 +34,14 @@ val CBibtexList = FC<Props>("Test") {
             for (i in items) {
                 li {
                     Link {
-                        +i._id!!
-                        to = i._id
+                        +"${i.author}"
+                        div {
+                            +"${i.title}"
+                        }
+                        div {
+                            +(i.year ?: "")
+                        }
+                        to = i._id!!
                     }
                 }
             }

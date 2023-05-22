@@ -2,9 +2,12 @@ package components.form
 
 import components.find.ShowProps
 import csstype.*
+import emotion.react.css
 import react.FC
+import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.h1
 import react.dom.html.ReactHTML.h2
+import react.dom.html.ReactHTML.span
 import react.dom.html.ReactHTML.table
 import react.dom.html.ReactHTML.td
 import react.dom.html.ReactHTML.tr
@@ -56,37 +59,33 @@ val CCreateBasicTable = FC<ShowProps>("Find") { props ->
         className = ClassName("bottomTable")
         tr {
             td {
-                className  = ClassName("leftTd")
                 +"Соискатель"
             }
             td {
-                className  = ClassName("rightTd")
+                className = ClassName("right-td")
                 +"______________${props.name}"
             }
         }
         tr {
             td {
-                className  = ClassName("leftTd")
                 +"Зав. кафедрой ____________"
             }
             td {
-                className  = ClassName("rightTd")
+                className = ClassName("right-td")
                 +"______________${props.zavName}"
             }
         }
         tr {
             td {
-                className  = ClassName("leftTd")
                 +"Ученый секретарь ученого совета"
             }
             td {
-                className  = ClassName("rightTd")
+                className = ClassName("right-td")
                 +"______________${props.secName}"
             }
         }
         tr {
             td {
-                className  = ClassName("leftTd")
                 +currentDate
             }
         }

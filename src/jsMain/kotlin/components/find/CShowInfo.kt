@@ -8,6 +8,7 @@ import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import react.*
 import react.dom.html.ReactHTML.details
+import react.dom.html.ReactHTML.h1
 import react.dom.html.ReactHTML.ol
 import react.dom.html.ReactHTML.summary
 import react.dom.html.ReactHTML.table
@@ -57,29 +58,21 @@ val CShowInfo = FC<ShowProps>("Read") { props ->
         }
     )
 
-    table {
-        tr {
-            th {
-                +"Результаты поиска"
-            }
-        }
-        props.files.forEachIndexed { index, list ->
-            details {
-                summary { +names[index] }
-                tr {
-                    td {
-                        ol {
-                            list.forEach { bib ->
-                                CEditInputFIle {
-                                    fields = bib.map()
-                                    this.query = {
-                                        updateQuery.mutateAsync(it, null)
-                                    }
-                                }
-                            }
-                        }
+    h1 {
+        +"Результаты поиска"
+    }
+    props.files.forEachIndexed { index, list ->
+        details {
+            summary { +names[index] }
+//            ol {
+            list.forEach { bib ->
+                CEditInputFIle {
+                    fields = bib.map()
+                    this.query = {
+                        updateQuery.mutateAsync(it, null)
                     }
                 }
+//                }
             }
         }
     }

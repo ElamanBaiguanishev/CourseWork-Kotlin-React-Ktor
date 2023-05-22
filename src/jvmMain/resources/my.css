@@ -31,18 +31,46 @@ nav a {
   color: black;
 }
 
-.table-items {
-  /* display: flex; */
-  margin: auto;
-  width: 100%;
-  border: 1px solid black;
-  border-collapse: collapse;
+.div-1 {
+    margin: auto;
+    width: 70%;
 }
 
-.table-items td {
-  border: 1px solid black;
-  padding: 5px;
-  text-align: center;
+.table {
+    width: 100%;
+	border: none;
+	margin-bottom: 20px;
+}
+
+.table thead th {
+	font-weight: bold;
+	text-align: left;
+	border: none;
+	padding: 10px 15px;
+	background: #d8d8d8;
+	font-size: 14px;
+}
+.table thead tr th:first-child {
+	border-radius: 8px 0 0 8px;
+}
+.table thead tr th:last-child {
+	border-radius: 0 8px 8px 0;
+}
+.table tbody td {
+	text-align: left;
+	border: none;
+	padding: 10px 15px;
+	font-size: 14px;
+	vertical-align: top;
+}
+.table tbody tr:nth-child(even){
+	background: #f3f3f3;
+}
+.table tbody tr td:first-child {
+	border-radius: 8px 0 0 8px;
+}
+.table tbody tr td:last-child {
+	border-radius: 0 8px 8px 0;
 }
 
 .footer {
@@ -60,19 +88,6 @@ nav a {
     text-align: center;
 }
 
-td {
-    border-width: 2px;
-    border-style: solid;
-}
-
-.leftTd {
-    border-width: 0px
-}
-
-.rightTd {
-    border-width: 0px
-}
-
 .topTable {
     text-align: center;
     width: 1400px;
@@ -82,7 +97,52 @@ td {
     margin: auto;
 }
 
+.topTable td {
+  border-width: 2px;
+  border-style: solid;
+}
+
 .bottomTable {
-    width: 2100px;
+    width: 1400px;
     margin: auto;
+}
+
+.bottomTable td{
+    border-width: 0px
+}
+
+.right-td {
+    width: 200px;
+}
+
+.custom-file-input {
+  color: transparent;
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: 'Select some files';
+  color: black;
+  display: inline-block;
+  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.custom-file-input:hover::before {
+  border-color: black;
+}
+.custom-file-input:active {
+  outline: 0;
+}
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
 }

@@ -1,6 +1,7 @@
 package components.load
 
 import config.Config
+import csstype.ClassName
 import data.BibTex
 import js.core.get
 import js.core.jso
@@ -39,6 +40,7 @@ val CInputFileBibtex = FC<Props>("inputText") {
 
     div {
         input {
+            className = ClassName("custom-file-input")
             type = InputType.file
             onChange = { changeEvent ->
                 changeEvent.target.files!![0].text().then { result = it }

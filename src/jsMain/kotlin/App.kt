@@ -79,7 +79,7 @@ val app = FC<Props>("App") {
     footer {
         className = ClassName("footer")
         div {
-            +"GoOgLe CoRp. PrOJeCt"
+            +"20m application"
         }
     }
 }

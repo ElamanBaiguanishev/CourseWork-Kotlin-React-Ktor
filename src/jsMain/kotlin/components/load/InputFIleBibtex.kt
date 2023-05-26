@@ -26,6 +26,7 @@ val CInputFileBibtex = FC<Props>("inputText") {
     val myQueryKey = arrayOf("update").unsafeCast<QueryKey>()
 
     var result by useState<String>(" ")
+
     val fields = Regex("([a-zA-Z]+) *= *[\"{]*([a-zA-Z0-9 ,-:]+)[\"}]*")
         .findAll(result)
         .associate {

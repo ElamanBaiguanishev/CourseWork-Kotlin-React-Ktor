@@ -1,19 +1,15 @@
 package components.load
 
-import config.Config
 import csstype.*
 import data.BibTex
-import emotion.react.css
-import js.core.jso
-import kotlinx.serialization.encodeToString
-import kotlinx.serialization.json.Json
 import react.FC
 import react.Props
-import react.dom.aria.ariaColSpan
 import react.dom.html.ReactHTML.button
 import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.input
-import react.dom.html.ReactHTML.span
+import react.dom.html.ReactHTML.label
+import react.dom.html.ReactHTML.option
+import react.dom.html.ReactHTML.select
 import react.dom.html.ReactHTML.table
 import react.dom.html.ReactHTML.tbody
 import react.dom.html.ReactHTML.td
@@ -22,14 +18,8 @@ import react.dom.html.ReactHTML.thead
 import react.dom.html.ReactHTML.tr
 import react.useRef
 import react.useState
-import tanstack.query.core.QueryKey
-import tanstack.react.query.useMutation
-import tanstack.react.query.useQueryClient
-import tools.HTTPResult
-import tools.fetch
-import web.html.HTMLInputElement
+import web.html.HTMLSelectElement
 import web.html.InputType
-import kotlin.js.json
 
 external interface EditFileProps : Props {
     var fields: MutableMap<String?, String?>
@@ -39,6 +29,7 @@ external interface EditFileProps : Props {
 val CEditInputFIle = FC<EditFileProps>("EditFile") { props ->
     var edit: Pair<String, String>? by useState()
     val map by useState(props.fields)
+    val refSelect = useRef<HTMLSelectElement>()
 
     div {
         className = ClassName("div-1")
@@ -96,6 +87,21 @@ val CEditInputFIle = FC<EditFileProps>("EditFile") { props ->
                         }
                     }
                 }
+            }
+        }
+        select {
+            ref = refSelect
+            BibTex.tags(map).forEach {
+                option {
+                    +it
+                }
+            }
+        }
+        button {
+            +"Добавить"
+            onClick = {
+                map += refSelect.current?.value!! to ""
+                edit = refSelect.current?.value!! to ""
             }
         }
         button {

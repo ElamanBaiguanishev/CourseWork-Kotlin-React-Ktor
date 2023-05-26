@@ -5,6 +5,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 typealias BibTexId = String
+
 @Serializable
 data class BibTex(
     val _id: BibTexId? = null,
@@ -69,5 +70,19 @@ data class BibTex(
             "edition" to edition,
             "organization" to organization,
         )
+    }
+
+    companion object {
+        fun tags(map: MutableMap<String?, String?>): MutableList<String> {
+            val allKeys = mutableListOf(
+                "type", "tag", "author", "title", "journal", "year",
+                "volume", "number", "pages", "month", "note", "key",
+                "publisher","series", "address", "edition", "organization"
+            )
+            val currentKeys = map.keys
+            allKeys.removeAll(currentKeys)
+//            if (currentKeys.containsAll(allKeys))
+            return allKeys
+        }
     }
 }

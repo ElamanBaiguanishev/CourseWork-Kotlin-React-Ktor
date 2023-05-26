@@ -1,4 +1,4 @@
-import components.load.CBibtex
+import components.load.CCurrentBibtex
 import components.load.CBibtexList
 import components.load.CInputFileBibtex
 import components.find.CReadCriterion
@@ -65,7 +65,7 @@ val app = FC<Props>("App") {
                 }
                 Route {
                     path = Config.uploadPath + ":id"
-                    element = CBibtex.create()
+                    element = CCurrentBibtex.create()
                 }
                 Route {
                     path = "form"

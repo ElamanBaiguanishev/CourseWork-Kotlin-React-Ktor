@@ -52,7 +52,6 @@ kotlin {
         }
         val jvmMain by getting {
             dependencies {
-                implementation("org.jbibtex:jbibtex:1.0.20")
                 implementation("io.ktor:ktor-server-core:2.2.2")
                 implementation("io.ktor:ktor-server-netty:2.2.2")
                 implementation("io.ktor:ktor-server-content-negotiation:2.2.2")
@@ -88,7 +87,6 @@ kotlin {
                             "org.jetbrains.kotlin-wrappers:kotlin-wrappers-bom:1.0.0-pre.490"
                         )
                     )
-                    implementation("org.jbibtex:jbibtex:1.0.20")
                     implementation("io.ktor:ktor-serialization-kotlinx-json:2.2.2")
                     implementation("org.jetbrains.kotlin-wrappers:kotlin-emotion")
                     implementation("org.jetbrains.kotlin-wrappers:kotlin-react")
@@ -98,7 +96,6 @@ kotlin {
                     implementation("org.jetbrains.kotlin-wrappers:kotlin-tanstack-react-query")
                     implementation("org.jetbrains.kotlin-wrappers:kotlin-tanstack-react-query-devtools")
                     implementation(npm("cross-fetch", "3.1.5"))
-                    implementation(npm("bibtex", "0.9.0"))
                 }
             }
         }

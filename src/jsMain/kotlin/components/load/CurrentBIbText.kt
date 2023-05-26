@@ -23,7 +23,7 @@ import tools.fetchText
 import kotlin.js.json
 
 
-val CBibtex = FC<Props>("Test") {
+val CCurrentBibtex = FC<Props>("Test") {
     val id = useParams()["id"] as BibTexId
     val queryClient = useQueryClient()
     val myQueryKey = arrayOf("update").unsafeCast<QueryKey>()

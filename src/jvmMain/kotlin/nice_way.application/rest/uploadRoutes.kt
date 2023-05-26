@@ -9,7 +9,6 @@ import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import nice_way.application.mongo.collection
 import org.litote.kmongo.*
-import java.io.File
 
 fun Route.uploadRoutes() {
     route(Config.uploadPath) {
@@ -39,11 +38,6 @@ fun Route.uploadRoutes() {
             )
         }
         put() {
-//            val id = call.parameters["id"]
-//                ?: return@put call.respondText(
-//                    "Missing or malformed id",
-//                    status = HttpStatusCode.BadRequest
-//                )
             val bibtex = call.receive<BibTex>()
             val id = bibtex._id as String
             collection.updateOne(

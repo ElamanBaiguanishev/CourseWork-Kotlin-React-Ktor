@@ -1,7 +1,5 @@
 package data
 
-import kotlinx.serialization.Contextual
-import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 typealias BibTexId = String

@@ -27,7 +27,7 @@ val CInputFileBibtex = FC<Props>("inputText") {
 
     var result by useState<String>(" ")
 
-    val fields = Regex("([a-zA-Z]+) *= *[\"{]*([a-zA-Z0-9 ,-:]+)[\"}]*")
+    val fields = Regex("([a-zA-Z]+) *= *[\"{]* *([a-zA-Z0-9А-Яа-я ,-:.()]+)[\"}]*")
         .findAll(result)
         .associate {
             it.groups[1]?.value to it.groups[2]?.value
@@ -36,8 +36,8 @@ val CInputFileBibtex = FC<Props>("inputText") {
     val params = Regex("@([a-zA-Z]+) *\\{ *(.+),")
         .findAll(result)
         .map {
-            it.groups.map { it?.value }
-        }.toList().flatten()
+            it.groups[1]?.value to it.groups[2]?.value
+        }.toList()
 
     div {
         input {
@@ -69,8 +69,8 @@ val CInputFileBibtex = FC<Props>("inputText") {
 
     if (fields.isNotEmpty()) {
         CEditInputFIle {
-            fields += "type" to params[0]
-            fields += "tag" to params[1]
+            fields += "type" to params[0].first
+            fields += "tag" to params[0].second
             this.fields = fields.toMutableMap()
             this.query = {
                 addMutation.mutateAsync(it, null)

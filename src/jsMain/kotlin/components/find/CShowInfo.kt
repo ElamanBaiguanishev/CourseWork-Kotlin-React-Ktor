@@ -9,12 +9,7 @@ import kotlinx.serialization.json.Json
 import react.*
 import react.dom.html.ReactHTML.details
 import react.dom.html.ReactHTML.h1
-import react.dom.html.ReactHTML.ol
 import react.dom.html.ReactHTML.summary
-import react.dom.html.ReactHTML.table
-import react.dom.html.ReactHTML.td
-import react.dom.html.ReactHTML.th
-import react.dom.html.ReactHTML.tr
 import tanstack.query.core.QueryKey
 import tanstack.react.query.useMutation
 import tanstack.react.query.useQueryClient
@@ -64,7 +59,6 @@ val CShowInfo = FC<ShowProps>("Read") { props ->
     props.files.forEachIndexed { index, list ->
         details {
             summary { +names[index] }
-//            ol {
             list.forEach { bib ->
                 CEditInputFIle {
                     fields = bib.map()
@@ -72,7 +66,6 @@ val CShowInfo = FC<ShowProps>("Read") { props ->
                         updateQuery.mutateAsync(it, null)
                     }
                 }
-//                }
             }
         }
     }

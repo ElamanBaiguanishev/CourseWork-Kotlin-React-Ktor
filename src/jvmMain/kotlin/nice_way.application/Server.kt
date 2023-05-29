@@ -1,6 +1,5 @@
 package nice_way.application
 
-import data.BibTex
 import io.ktor.serialization.kotlinx.json.*
 import io.ktor.server.application.*
 import io.ktor.server.engine.*
@@ -10,7 +9,6 @@ import io.ktor.server.plugins.contentnegotiation.*
 import io.ktor.server.routing.*
 import nice_way.application.rest.readRoutes
 import nice_way.application.rest.uploadRoutes
-import kotlin.reflect.full.memberProperties
 
 fun main() {
 //    val port = System.getenv("PORT")?.toInt() ?: 8080

@@ -11,7 +11,6 @@ import nice_way.application.rest.readRoutes
 import nice_way.application.rest.uploadRoutes
 
 fun main() {
-//    val port = System.getenv("PORT")?.toInt() ?: 8080
     embeddedServer(
         Netty,
         port = 8080,
@@ -32,9 +31,6 @@ fun Application.main(isTest: Boolean = true) {
 fun Application.config(isTest: Boolean) {
     install(ContentNegotiation) {
         json()
-    }
-    install(Compression) {
-        gzip()
     }
 }
 

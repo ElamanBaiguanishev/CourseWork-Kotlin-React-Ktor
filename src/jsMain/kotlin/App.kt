@@ -76,10 +76,10 @@ val app = FC<Props>("App") {
             }
         }
     }
-    footer {
-        className = ClassName("footer")
-        div {
-            +"20m application"
-        }
-    }
+//    footer {
+//        className = ClassName("footer")
+//        div {
+//            +"20m application"
+//        }
+//    }
 }

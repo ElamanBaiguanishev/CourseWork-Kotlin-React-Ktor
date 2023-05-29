@@ -79,7 +79,17 @@ data class BibTex(
             )
             val currentKeys = map.keys
             allKeys.removeAll(currentKeys)
-//            if (currentKeys.containsAll(allKeys))
+            if (allKeys.isEmpty()) {
+                val a = map.mapNotNull {
+                    if (it.value == null){
+                        it.key
+                    }
+                    else {
+                        null
+                    }
+                }
+                return a.toMutableList()
+            }
             return allKeys
         }
     }
